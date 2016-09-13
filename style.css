@@ -1,15 +1,13 @@
 body {
 	font-size: 24px;
 }
-
 #logo {
 	position: absolute;
 	z-index: 1000;
-	top: 0.5em;
 	left: 0;
 }
 #logo img {
-	opacity: 0.5;
+	opacity: 0.4;
 }
 #logo img.dark {
 	display: none;
@@ -32,16 +30,17 @@ body {
 }
 #clock {
 	left: 0;
+	padding: 0 1em 0 2em;
 }
 #next {
 	right: 0;
+	padding: 0 2em 0 1em;
 }
 #clock, #next {
 	position: absolute;
 	z-index: 1000;
 	line-height: 2em;
 	bottom: 1em;
-	padding: 0 1em;
 	font-weight: 700;
 }
 #clock, #next, #logo {

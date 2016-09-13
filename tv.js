@@ -12,8 +12,6 @@ S(document).ready(function(){
 	tv = new TV();	
 });
 
-
-
 function TV(){
 
 	// Full Screen API - http://johndyer.name/native-fullscreen-javascript-api-plus-jquery-plugin/
@@ -104,6 +102,25 @@ function TV(){
 
 		return this;
 	}
+	
+	
+	function getStyleSheetPropertyValue(selectorText, propertyName) {
+		// search backwards because the last match is more likely the right one
+		for(var s= document.styleSheets.length - 1; s >= 0; s--) {
+			// Use a try/catch to stop Firefox throwing a security error for stylesheets originating from a different domain. 
+			// See http://stackoverflow.com/questions/21642277/security-error-the-operation-is-insecure-in-firefox-document-stylesheets?noredirect=1&lq=1
+			try {
+				var cssRules = document.styleSheets[s].rules || document.styleSheets[s].cssRules
+				for (var c=0; c < cssRules.length; c++) {
+					if (cssRules[c].selectorText === selectorText) return cssRules[c].style[propertyName];
+				}
+			}catch(e){
+
+			}
+		}
+		return null;
+	}
+		
 	this.setProgramme = function(i){
 		if(this.programmes.loaded){
 			if(!i){
@@ -125,11 +142,12 @@ function TV(){
 			image = false;
 			if(p.url.lastIndexOf(".png")==p.url.length-4 || p.url.lastIndexOf(".jpg")==p.url.length-4) image = true;
 			
-			if(image){
-				S('#screen').css({'background-image':'url("'+p.url+'")','background-color':(p.colour || '')}).html('');
-			}else{
-				S('#screen').css({'background-image':'','background-color':''}).html('<iframe src="'+p.url+'"></iframe>')
-			}
+			if(image) S('#screen').css({'background-image':'url("'+p.url+'")','background-color':(p.colour || '')}).html('');
+			else S('#screen').css({'background-image':'','background-color':''}).html('<iframe src="'+p.url+'"></iframe>');
+			
+			S('#logo img.dark').css({'display':(p.darklogo ? 'block' : 'none')});
+			S('#logo img.light').css({'display':(p.darklogo ? 'none' : 'block')});
+			
 			S('#next').html('Next: '+this.programmes.slides[next].title);
 			var d = (p.duration*1000) || 30000;
 			this.updateOverlays(p.hidelogo,p.hideclock,p.hidenext);
@@ -196,7 +214,8 @@ function TV(){
 							{'name':'colour','format':'string'},
 							{'name':'hidelogo','format':'boolean'},
 							{'name':'hideclock','format':'boolean'},
-							{'name':'hidenext','format':'boolean'}
+							{'name':'hidenext','format':'boolean'},
+							{'name':'darklogo','format':'boolean'}
 							]);
 		this.loaded = true;
 		return this;
@@ -284,4 +303,3 @@ function TV(){
 
 	return this;
 }
-
