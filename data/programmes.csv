@@ -1,6 +1,6 @@
 ID,URL,title,duration,background colour,hide logo,hide clock,hide next,dark logo
 1,"https://odileeds.org/blog/images/open-smart-cities.png","Open Smart Cities",10,"white",,,,true
-2,"https://odileeds.org/blog/images/allotment-4.jpg","Open allotments",10,"white",true,,true,true
+2,"http://odileeds.org/data/allotments/map/","Open data: allotments",10,"white",true,,,true
 3,"https://odileeds.org/blog/images/datamillnorth.jpg","Data Mill North",10,"white",,,,true
 4,"https://odileeds.org/dashboard/","Dashboard",30,"black",true,,,
 5,"https://odileeds.org/dashboard/#web","Web stats",10,"black",,,,
