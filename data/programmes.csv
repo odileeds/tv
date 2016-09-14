@@ -2,7 +2,7 @@ ID,URL,title,duration,background colour,hide logo,hide clock,hide next,dark logo
 1,"https://odileeds.org/blog/images/open-smart-cities.png","Open Smart Cities",10,"white",,,,true
 2,"http://odileeds.org/data/allotments/map/","Open data: allotments",10,"white",true,,,true
 3,"https://odileeds.org/blog/images/datamillnorth.jpg","Data Mill North",10,"white",,,,true
-4,"https://odileeds.org/dashboard/","Dashboard",30,"black",true,,,
+4,"https://odileeds.org/dashboard/","Dashboard",30,"black",true,true,true,
 5,"https://odileeds.org/dashboard/#web","Web stats",10,"black",,,,
 6,"https://odileeds.org/dashboard/#network","Friends of ODI Leeds",10,"black",,,,true
 7,"https://odileeds.org/dashboard/#sponsors","Sponsors",10,"black",,,,
