@@ -8,6 +8,5 @@ ID,URL,title,duration,background colour,hide logo,hide clock,hide next,dark logo
 7,"https://odileeds.org/dashboard/#sponsors","Sponsors",10,"black",,,,
 8,"https://odileeds.org/dashboard/#partners","Partners",10,"black",,,,true
 9,"https://odileeds.org/dashboard/#projects","Projects",10,"black",,,,true
-10,"https://www.youtube.com/embed/C4CM7MYNx74?autoplay=1","Algorave",100,"black",,,,
-11,"https://docs.google.com/presentation/d/1IRThXUBMKDQT-gEh9tf7fC0GZQ5DWtHgaVkwnfdU_q4/embed?start=true&loop=false&delayms=3000","ODI Leeds",33,"black",true,,,
-12,"https://odileeds.org/events/tv","Upcoming events",30,"background",true,,,
+10,"https://docs.google.com/presentation/d/1IRThXUBMKDQT-gEh9tf7fC0GZQ5DWtHgaVkwnfdU_q4/embed?start=true&loop=false&delayms=3000","ODI Leeds",33,"black",true,,,
+11,"https://odileeds.org/events/tv","Upcoming events",30,"background",true,,,
